@@ -9,7 +9,6 @@ function Results() {
   const navigate = useNavigate();
 
   const handleClick = (meal) => {
-    // Navigera till sidan för den valda maträtten och skicka med data om maträtten
     navigate(`/MealDetails/${meal.idMeal}`, { state: { meal } });
   };
 

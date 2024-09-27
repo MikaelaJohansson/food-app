@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom'; // För att navigera
+import { useNavigate } from 'react-router-dom'; 
+import styles from '../css/Home.module.css';  
+
+
 
 const Home = () => {
 
     const [meal,setMeal]=useState([]);
     const [query, setQuery] = useState('');
-    const navigate = useNavigate(); // Hook för att navigera
+    const navigate = useNavigate(); 
 
     useEffect(()=>{
         axios.get('https://www.themealdb.com/api/json/v1/1/categories.php')
@@ -23,8 +26,6 @@ const Home = () => {
         try {
             const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
           const meals = response.data.meals || [];
-    
-          // Navigera till resultatsidan och skicka sökresultaten som state
           navigate('/Results', { state: { meals, query } });
         } catch (error) {
           console.error('Error fetching data:', error);
@@ -32,38 +33,33 @@ const Home = () => {
     };
 
   return(
-    <>
-
-        <header>
-            <h1>Foodies</h1>
-            <img src="/img/pexels-ivan-samkov-4783969.jpg" alt="food" width={600} />
+    <div className={styles.container}>
+        <header className={styles.head}>
+            <h1 className={styles.headH1}>Cooking Together</h1>
         </header>
 
         <div>
             <input 
+                className={styles.input}
                 type="text" 
                 value={query} 
                 onChange={(e) => setQuery(e.target.value)} 
                 placeholder="Search for a meal"
             />
-            <button onClick={handleSearch}>Search</button>
+            <button className={styles.input} onClick={handleSearch}>Search</button>
         </div>
 
-
-        <ul>
-            {meal.map(meal =>(
-                <li 
-                    key={meal.idCategory}>
+        <ul className={styles.kategoriesContainer}>
+            {meal.map(meal => (
+                <li className={styles.kategories} key={meal.idCategory}>
                     <Link to={`/category/${meal.strCategory}`}>
-                        <img src={meal.strCategoryThumb} 
-                        alt={meal.strCategory}/>
-                        {meal.strCategory} 
+                        <img src={meal.strCategoryThumb} alt={meal.strCategory} />
+                        {meal.strCategory}
                     </Link>                             
                 </li>
             ))}
         </ul>
-        
-    </>
+    </div>
   ) 
 };
 

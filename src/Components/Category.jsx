@@ -13,11 +13,11 @@ const Category = () => {
                 if (response.data.meals) {
                     setMeals(response.data.meals);
                 } else {
-                    setMeals([]); // Sätt till tom array om inga måltider finns
+                    setMeals([]); 
                 }
             } catch (error) {
                 console.error("Error fetching meals:", error);
-                setMeals([]); // Hantera fel genom att sätta tom array
+                setMeals([]); 
             }
         };
         fetchMeals();
@@ -31,7 +31,7 @@ const Category = () => {
                     meals.map(meal => (
                         <li key={meal.idMeal}>
                             <Link to={`/MealDetails/${meal.idMeal}`} state={{ meal }}>
-                                {meal.strMeal} <p>{meal.strInstructions}</p>
+                                {meal.strMeal} 
                                 <img src={meal.strMealThumb} alt={meal.strMeal} />
                             </Link>
                         </li>

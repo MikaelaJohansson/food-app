@@ -1,0 +1,97 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.head {
+    background-image: url('/img/pexels-ivan-samkov-4783969.jpg');
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 6rem;
+    background-attachment: fixed;
+    border-radius: 0.2rem;
+}
+
+.headH1 {
+    text-align: center;
+    padding-top: 18rem;
+    color: black;
+    font-size: 6rem;
+    text-shadow: 
+        -1px -1px 0 #fdfcfc,
+        2px -2px 0 #fcfafa,
+        -2px 2px 0 #ffffff,
+        2px 2px 0 #ffffff;
+}
+
+.input {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    border-radius: 0.3rem;
+}
+
+/* För griden med kategorier */
+.kategoriesContainer {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Två kolumner */
+    gap: 10px; /* Mellanrum mellan objekten */
+    padding: 10px;
+    width: 100%; /* Tar upp hela bredden */
+    max-width: 1200px; /* Begränsa bredden så den inte sträcker sig för långt */
+    margin: 0 auto;
+    
+    place-items: center;
+}
+
+/* Individuella kategorier */
+.kategories {
+    position: relative; /* Behöver positionering för att pseudo-elementet ska placeras korrekt */
+    list-style: none;
+    border-radius: 1rem;
+    width: fit-content;
+    margin: 2rem;
+    box-shadow: 2pc 3pc 4pc black;
+    text-align: center;
+   
+    overflow: hidden; /* För att pseudo-elementet inte ska sticka utanför gränserna */
+}
+
+.kategories::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/pexels-taryn-elliott-4440171.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px); /* Suddig bakgrund */
+    opacity: 20px;
+    z-index: -1; /* Placera bakom kategoriernas innehåll */
+  
+}
+
+
+.kategories img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Justera bildens max-bredd */
+    object-fit:scale-down; /* Anpassar bilden så att den fyller området */
+    width: 300px; /* Bredden */
+    height: 300px; /* Höjden, lika med bredden för att göra det kvadratiskt */
+    border-radius: 50%; 
+  
+    margin-bottom: 5rem;
+    position: relative;
+  
+    padding-bottom: 2rem;
+}
+
+

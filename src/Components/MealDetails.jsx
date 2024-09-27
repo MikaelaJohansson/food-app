@@ -33,7 +33,6 @@ const MealDetails = () => {
       <h1>{meal.strMeal}</h1>
       <p>{meal.strInstructions}</p>
       <img src={meal.strMealThumb} alt={meal.strMeal} style={{ width: '400px' }} />
-      {/* Du kan även visa fler detaljer, som ingredienser */}
       <h3>Ingredients:</h3>
       <ul>
         {Object.keys(meal).filter(key => key.includes('strIngredient') && meal[key]).map((key, index) => (
