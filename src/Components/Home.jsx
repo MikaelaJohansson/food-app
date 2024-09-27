@@ -53,8 +53,9 @@ const Home = () => {
             {meal.map(meal => (
                 <li className={styles.kategories} key={meal.idCategory}>
                     <Link to={`/category/${meal.strCategory}`}>
-                        <img src={meal.strCategoryThumb} alt={meal.strCategory} />
                         {meal.strCategory}
+                        <img src={meal.strCategoryThumb} alt={meal.strCategory} />
+                        
                     </Link>                             
                 </li>
             ))}

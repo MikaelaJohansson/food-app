@@ -18,7 +18,7 @@ body::before{
   background-size: cover;
   background-position: center;
   filter: blur(10px);
-  -webkit-filter: blur(8px);
+  -webkit-filter: blur(10px);
   z-index: -1;
 }
 
