@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import styles from '../css/Results.module.css'; 
 
 function Results() {
   const location = useLocation();
@@ -14,11 +15,11 @@ function Results() {
 
   return (
     <div>
-      <h1>Search Results for: {query}</h1>
-      <ul>
+      <h1 className={styles.resultText}>Search Results for: {query}</h1>
+      <ul className={styles.resultContainer}>
         {meals.length > 0 ? (
           meals.map((meal) => (
-            <li key={meal.idMeal} onClick={() => handleClick(meal)}>
+            <li key={meal.idMeal} onClick={() => handleClick(meal)} className={styles.ObjectContainer}>
               <h2>{meal.strMeal}</h2>
               <img src={meal.strMealThumb} alt={meal.strMeal} style={{ width: '200px' }} />
             </li>

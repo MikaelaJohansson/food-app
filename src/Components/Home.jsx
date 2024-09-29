@@ -34,8 +34,10 @@ const Home = () => {
 
   return(
     <div className={styles.container}>
+        
         <header className={styles.head}>
             <h1 className={styles.headH1}>Cooking Together</h1>
+            <h1 className={styles.headH1Pil}> &#9660;</h1>
         </header>
 
         <div>
@@ -52,10 +54,9 @@ const Home = () => {
         <ul className={styles.kategoriesContainer}>
             {meal.map(meal => (
                 <li className={styles.kategories} key={meal.idCategory}>
-                    <Link to={`/category/${meal.strCategory}`}>
+                    <Link to={`/category/${meal.strCategory}`} className={styles.link}>
                         {meal.strCategory}
                         <img src={meal.strCategoryThumb} alt={meal.strCategory} />
-                        
                     </Link>                             
                 </li>
             ))}

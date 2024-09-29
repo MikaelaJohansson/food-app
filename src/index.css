@@ -6,6 +6,10 @@ body {
   min-height: 100vh; 
   position: relative;
   margin-top: -2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 body::before{
   content: '';
@@ -18,7 +22,7 @@ body::before{
   background-size: cover;
   background-position: center;
   filter: blur(10px);
-  -webkit-filter: blur(10px);
+  -webkit-filter: blur(40px);
   z-index: -1;
 }
 
