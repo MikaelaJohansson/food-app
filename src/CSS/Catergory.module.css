@@ -15,7 +15,10 @@
     font-family: "Lobster", sans-serif;
     font-style: normal;
     font-size: 3rem;
-    color: rgb(237, 235, 235);
+    color: rgb(212, 84, 116);
+    text-shadow: 
+    2px 2px 0 rgb(4, 2, 0),
+    3px 3px 0 rgb(20, 5, 15);
     margin-top: 9rem;
     margin-bottom: 4rem;
     text-decoration: underline;
@@ -47,12 +50,13 @@
     align-items: center; 
     justify-content: space-between; 
     box-shadow: 1px 1px 5px rgb(195, 188, 173);
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     overflow: hidden; 
     text-decoration: none;
     color: black;
     z-index: 1;
+    font-weight: 900;
 }
 
 .categorylist::before {

@@ -14,9 +14,16 @@
     font-weight: 560;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     z-index: 1;
+    
 }
 .detailContainer h1{
     font-family: "Lobster", sans-serif;
+    color: rgb(212, 84, 116);
+    text-shadow: 
+    2px 2px 0 rgb(4, 2, 0),
+    3px 3px 0 rgb(20, 5, 15);
+    font-size: 3rem;
+    text-decoration: underline;
 }
 .detailContainer::before {
     content: '';

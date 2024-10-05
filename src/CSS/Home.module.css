@@ -46,11 +46,11 @@
 .headH1 {
     text-align: center;
     padding-top: 18rem;
-    color: whitesmoke;
+    color: rgb(187, 94, 117);
     font-size: 7rem;
     text-shadow: 
-        2px 2px 0 rgb(134, 88, 44),
-        3px 3px 0 rgb(123, 78, 46);
+        2px 2px 0 rgb(4, 2, 0),
+        3px 3px 0 rgb(65, 11, 49);
     white-space: nowrap; 
     overflow: hidden; 
     width: 0; 
@@ -144,14 +144,20 @@
 
 .link {
     text-decoration: none;
-    color: black;
+    color: rgb(212, 84, 116);
+    text-shadow: 
+  
+    1px 1px 0 rgb(4, 2, 0),
+    
+    1px 1px 0 rgb(20, 5, 15);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 550;
-    font-size: 1.5rem;
+    font-weight: 900;
+    font-size: 2rem;
 }
 
 .link:hover {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    text-decoration: underline;
 }
 
 
