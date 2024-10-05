@@ -23,66 +23,40 @@
     box-sizing: border-box; 
 }
 
-.header {
-    margin-top: 2rem;
-    background-color: #b2cadd;
-    padding: 1rem;
-    text-align: center;
-    color:  black;
-    width: 100vw; 
-    box-sizing: border-box; 
-}
-
-.header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.header ul li {
-    display: inline; 
-    margin-right: 1.5rem;
-}
-
-.header ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 .headH1Pil{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 5rem;
-    color: black;
+    color: rgb(16, 9, 3);
 }
 
 .head {
-    background-image: url('/img/pexels-ivan-samkov-4783969.jpg');
+    background-image: url('/img/pexels-mikhail-nilov-8093837.jpg');
     background-size: cover;
-    background-position: top center;
     width: 100vw; 
-    height: 100vh; 
+    height: 90vh; 
     margin-bottom: 6rem;
     background-attachment: fixed;
     border-radius: 0.2rem;
     overflow: hidden;
-    white-space: nowrap;
+   
 }
 
 .headH1 {
     text-align: center;
-    padding-top: 25rem;
-    color: black;
-    font-size: 6rem;
+    padding-top: 18rem;
+    color: whitesmoke;
+    font-size: 7rem;
     text-shadow: 
-        2px 2px 0 white,
-        3px 3px 0 white;
+        2px 2px 0 rgb(134, 88, 44),
+        3px 3px 0 rgb(123, 78, 46);
     white-space: nowrap; 
     overflow: hidden; 
     width: 0; 
     animation: typing 2s steps(22) forwards; 
+    font-family: "Lobster", sans-serif;
+    font-style: normal;
 }
 
 @keyframes typing {
@@ -106,8 +80,7 @@
     grid-template-columns: repeat(3, 1fr); 
     width: fit-content; 
     max-width: fit-content;
-    margin-left: 2rem;
-    margin-right: 2rem;
+   
     place-items: center;
     margin-bottom: 3rem;
 }
@@ -133,7 +106,7 @@
     position: relative; 
     list-style: none;
     border-radius: 6rem;
-    width: 300px;
+    width: fit-content;
     margin: 2rem;
     box-shadow: 1px 1px 5px rgb(195, 188, 173);
     text-align: center;
@@ -162,7 +135,6 @@
     display: block;
     width: 200px;
     position: relative;
-    left: 1rem;
 }
 
 .kategories img:hover {

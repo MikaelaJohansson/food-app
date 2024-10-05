@@ -15,7 +15,9 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     z-index: 1;
 }
-
+.detailContainer h1{
+    font-family: "Lobster", sans-serif;
+}
 .detailContainer::before {
     content: '';
     position: absolute;
@@ -42,28 +44,4 @@
     bottom: 0;
     width: 100%;
     padding: 2rem;
-}
-.header{
-    background-color: #b2cadd;
-    padding: 1rem;
-    text-align: center;
-    margin-top: 2rem;
-    color: black;
-    width: 100%;
-    box-sizing: border-box;
-}
-.header ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.header ul li{
-    display: inline; 
-    margin-right: 1.5rem;
-}
-
-.header ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
 }

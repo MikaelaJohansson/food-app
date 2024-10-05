@@ -26,16 +26,6 @@ const Category = () => {
 
     return (
         <div>
-            <header className={styles.header}>
-                <h1>Cooking Together</h1>
-                <nav>
-                    <ul>
-                        <li>Find your next favorite meal!</li>
-                        <br />
-                        <li>Ingredients, recipes, and inspiration</li>
-                    </ul>
-                </nav>
-            </header>
             <h1 className={styles.categoryText}>Meals in Category: {categoryId}</h1>
             <ul className={styles.categoryContainer}>
                 {meals && meals.length > 0 ? (
@@ -53,7 +43,7 @@ const Category = () => {
                 )}
             </ul>
             <footer className={styles.footer}>
-             <p>&copy; 2024 Cooking Togheter. Alla rättigheter reserverade.</p>
+             <p>&copy; 2024 Kitchen Creations. Alla rättigheter reserverade.</p>
             </footer>
         </div>
     );

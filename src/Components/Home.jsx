@@ -35,20 +35,9 @@ const Home = () => {
 
   return(
     <div className={styles.container}>
-
-        <header className={styles.header}>
-            <h1>Cooking Together</h1>
-            <nav>
-                <ul>
-                    <li>Find your next favorite meal!</li>
-                    <br />
-                    <li>Ingredients, recipes, and inspiration</li>
-                </ul>
-            </nav>
-        </header>
-        
+  
         <section className={styles.head}>
-            <h1 className={styles.headH1}>Cooking Together</h1>
+            <h1 className={styles.headH1}>Kitchen Creations</h1>
             <h1 className={styles.headH1Pil}> &#9660;</h1>
         </section>
 
@@ -75,7 +64,7 @@ const Home = () => {
         </ul>
 
         <footer className={styles.footer}>
-            <p>&copy; 2024 Cooking Togheter. Alla rättigheter reserverade.</p>
+            <p>&copy; 2024 Kitchen Creations. Alla rättigheter reserverade.</p>
         </footer>
     </div>
   ) 

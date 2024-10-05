@@ -31,22 +31,14 @@ const MealDetails = () => {
 
   return (
     <>
-
-      <header className={styles.header}>
-        <h1>Cooking Together</h1>
-        <nav>
-          <ul>
-            <li>Find your next favorite meal!</li>
-            <br />
-            <li>Ingredients, recipes, and inspiration</li>
-          </ul>
-        </nav>
-      </header>
       <div className={styles.detailContainer}>
         <h1>{meal.strMeal}</h1>
-        <img className={styles.detailContainerimg} src={meal.strMealThumb} alt={meal.strMeal} style={{ width: '300px' }} />
+        <br />
+        <img className={styles.detailContainerimg} src={meal.strMealThumb} alt={meal.strMeal} style={{ width: '280px' }} />
+        <br />
         <h3>Cooking instructions:</h3>
         <p>{meal.strInstructions}</p>
+        <br />
         <h3>Ingredients:</h3>
         <ul>
           {Object.keys(meal).filter(key => key.includes('strIngredient') && meal[key]).map((key, index) => (
@@ -55,7 +47,7 @@ const MealDetails = () => {
         </ul>
       </div>
       <footer className={styles.footer}>
-        <p>&copy; 2024 Cooking Togheter. Alla rättigheter reserverade.</p>
+        <p>&copy; 2024 Kitchen Creations. Alla rättigheter reserverade.</p>
       </footer>
    </>
   );

@@ -15,16 +15,6 @@ function Results() {
 
   return (
     <div className={styles.resultsPageWrapper}>
-      <header className={styles.resultsHeader}>
-        <h1>Cooking Together</h1>
-        <nav>
-            <ul>
-              <li>Find your next favorite meal!</li>
-              <li>Ingredients, recipes, and inspiration</li>
-            </ul>
-        </nav>
-      </header>
-
       <div className={styles.resultsMainContent}>
         <h1 className={styles.resultText}>Search Results for: {query}</h1>
         <ul className={styles.resultContainer}>
@@ -42,7 +32,7 @@ function Results() {
       </div>
 
       <footer className={styles.resultsFooter}>
-        <p>&copy; 2024 Cooking Together. Alla rättigheter reserverade.</p>
+        <p>&copy; 2024 Kitchen Creations. Alla rättigheter reserverade.</p>
       </footer>
     </div>
   );
