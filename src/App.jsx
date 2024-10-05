@@ -4,7 +4,7 @@ import Home from './Components/Home';
 import Category from './Components/Category';
 import Results from './Components/Results';
 import MealDetails from './Components/MealDetails'; 
-
+import './index.css';
 
 function App() {
   return (

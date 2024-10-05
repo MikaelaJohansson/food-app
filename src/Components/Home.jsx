@@ -6,6 +6,7 @@ import styles from '../css/Home.module.css';
 
 
 
+
 const Home = () => {
 
     const [meal,setMeal]=useState([]);
@@ -34,11 +35,22 @@ const Home = () => {
 
   return(
     <div className={styles.container}>
+
+        <header className={styles.header}>
+            <h1>Cooking Together</h1>
+            <nav>
+                <ul>
+                    <li>Find your next favorite meal!</li>
+                    <br />
+                    <li>Ingredients, recipes, and inspiration</li>
+                </ul>
+            </nav>
+        </header>
         
-        <header className={styles.head}>
+        <section className={styles.head}>
             <h1 className={styles.headH1}>Cooking Together</h1>
             <h1 className={styles.headH1Pil}> &#9660;</h1>
-        </header>
+        </section>
 
         <div>
             <input 
@@ -61,6 +73,10 @@ const Home = () => {
                 </li>
             ))}
         </ul>
+
+        <footer className={styles.footer}>
+            <p>&copy; 2024 Cooking Togheter. Alla rättigheter reserverade.</p>
+        </footer>
     </div>
   ) 
 };

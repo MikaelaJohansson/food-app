@@ -1,47 +1,88 @@
+/* Återställ margin och padding för hela sidan */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+    box-sizing: border-box; 
+}
+
+.header {
+    margin-top: 2rem;
+    background-color: #b2cadd;
+    padding: 1rem;
+    text-align: center;
+    color:  black;
+    width: 100vw; 
+    box-sizing: border-box; 
+}
+
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header ul li {
+    display: inline; 
+    margin-right: 1.5rem;
+}
+
+.header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .headH1Pil{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 5rem;
-    color: rgb(251, 249, 249);
+    color: black;
 }
 
 .head {
     background-image: url('/img/pexels-ivan-samkov-4783969.jpg');
     background-size: cover;
     background-position: top center;
-    width: 100%;
-    height: 100vh;
+    width: 100vw; 
+    height: 100vh; 
     margin-bottom: 6rem;
     background-attachment: fixed;
     border-radius: 0.2rem;
-    margin-inline: auto;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 1px solid;
-    overflow: hidden; 
 }
 
 .headH1 {
     text-align: center;
     padding-top: 25rem;
-    color: rgb(254, 254, 254);
+    color: black;
     font-size: 6rem;
     text-shadow: 
-        -1px -1px 0 #92916a,
-        2px -2px 0 #7c6f48,
-        -2px 2px 0 #6b6e47,
-        3px 3px 0 rgb(179, 192, 125);
+        2px 2px 0 white,
+        3px 3px 0 white;
     white-space: nowrap; 
     overflow: hidden; 
     width: 0; 
-    animation: typing 1.5s steps(22) forwards; 
+    animation: typing 2s steps(22) forwards; 
 }
 
 @keyframes typing {
@@ -53,13 +94,11 @@
     }
 }
 
-
 .input {
     font-size: 1.3rem;
     border-radius: 0.3rem;
     box-shadow: 0px 0px 10px white;
 }
-
 
 .kategoriesContainer {
     list-style: none;
@@ -67,23 +106,24 @@
     grid-template-columns: repeat(3, 1fr); 
     width: fit-content; 
     max-width: fit-content;
-    margin: 0 auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
     place-items: center;
-  
+    margin-bottom: 3rem;
 }
 
-.kategoriesContainer{
+.kategoriesContainer {
     animation: appear linear;
     animation-timeline:view();
     animation-range: entry 0% cover 40%;
 }
 
-@keyframes appear{
-    from{
+@keyframes appear {
+    from {
         opacity: 0.9;
         scale: 0.6;
     }
-    to{
+    to {
         opacity: 1;
         scale: 1;
     }
@@ -92,43 +132,55 @@
 .kategories {
     position: relative; 
     list-style: none;
-    border-radius: 1rem;
-    width: fit-content;
+    border-radius: 6rem;
+    width: 300px;
     margin: 2rem;
-    box-shadow: 9px 1px 5px rgb(198, 203, 178);
+    box-shadow: 1px 1px 5px rgb(195, 188, 173);
     text-align: center;
-    font-size: 2rem;
+    padding: 2rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 1.5rem;
     overflow: hidden; 
+    z-index: 1;
 }
 
+.kategories::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.4;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    z-index: -1; 
+    border-radius: 1rem;
+}
 
 .kategories img {
     margin-top: 2rem;
-    max-width: fit-content; 
-    height: fit-content; 
     border-radius: 50%; 
+    display: block;
+    width: 200px;
+    position: relative;
+    left: 1rem;
 }
 
 .kategories img:hover {
-    transform: scale(1.2); 
+    transform: scale(1.6); 
+    padding: 1rem;
 }
 
-.link{
+.link {
     text-decoration: none;
-    color: white;
+    color: black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 550;
-    font-size: 2.6rem;
-    text-shadow: 
-    -1px -1px 0 #030303,
-    2px -2px 0 #050505,
-    -2px 2px 0 #080808,
-    2px 2px 0 #96987d;
+    font-size: 1.5rem;
 }
 
-.link:hover{
-    text-decoration: underline;
+.link:hover {
+    font-size: 1.6rem;
 }
+
+
 

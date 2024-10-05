@@ -1,0 +1,112 @@
+
+.header {
+    background-color: #b2cadd;
+    padding: 1rem;
+    text-align: center;
+    color: black;
+    margin-top: 2rem;
+    width: 100vw; 
+    box-sizing: border-box; 
+}
+
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header ul li {
+    display: inline; 
+    margin-right: 1.5rem;
+}
+
+.header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100vw; 
+    box-sizing: border-box;
+}
+
+.categoryText {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3rem;
+    color: black;
+    margin-top: 9rem;
+    margin-bottom: 4rem;
+    text-decoration: underline;
+}
+
+.categoryContainer {
+    cursor: pointer;
+}
+
+.catlist {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.categorylist {
+    position: relative; 
+    width: 50%;
+    height: inherit;
+    border-radius: 1rem;
+    max-width: 50%;
+    padding: 2rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between; 
+    box-shadow: 1px 1px 5px rgb(195, 188, 173);
+    font-size: 1.8rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow: hidden; 
+    text-decoration: none;
+    color: black;
+    z-index: 1;
+}
+
+.categorylist::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.4;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    z-index: -1; 
+    border-radius: 1rem; 
+}
+
+.categorylist img {
+    margin-top: 0; 
+    max-width: 150px; 
+    width: 150px;
+    height: 150px; 
+    border-radius: 50%; 
+}
+
+.categorylist img:hover {
+    transform: scale(1.2); 
+    box-shadow: 3px 1px 5px rgb(242, 229, 204);
+}
+
+.categorylist:hover {
+   text-decoration: underline;
+}
+
