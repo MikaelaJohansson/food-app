@@ -24,6 +24,7 @@
     3px 3px 0 rgb(20, 5, 15);
     font-size: 3rem;
     text-decoration: underline;
+    text-align: center;
 }
 .detailContainer::before {
     content: '';
@@ -38,9 +39,10 @@
     border-radius: 1rem; 
 }
 
-.detailContainerimg {
+.detailContainer img {
     border-radius: 50%; 
     box-shadow: 3px 1px 5px rgb(242, 229, 204);
+    width: 300px;
 }
 .footer {
     background-color: #333;
@@ -51,4 +53,25 @@
     bottom: 0;
     width: 100%;
     padding: 2rem;
+}
+.link {
+    color: black;
+    font-weight:bolder;
+    font-size: 1.2rem;
+}
+.link:hover{
+    font-size: 1.4rem;
+}
+
+@media only screen and (max-width:600px){
+    .detailContainer h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .detailContainer img {
+        width: 200px;
+        position: relative;
+        left: 2.5rem;
+    }
 }

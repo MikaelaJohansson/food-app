@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from '../CSS/MealDetails.module.css'
 
@@ -34,19 +34,22 @@ const MealDetails = () => {
       <div className={styles.detailContainer}>
         <h1>{meal.strMeal}</h1>
         <br />
-        <img className={styles.detailContainerimg} src={meal.strMealThumb} alt={meal.strMeal} style={{ width: '280px' }} />
+        <img className={styles.detailContainerimg} src={meal.strMealThumb} alt={meal.strMeal}  />
         <br />
         <h3>Cooking instructions:</h3>
         <p>{meal.strInstructions}</p>
         <br />
         <h3>Ingredients:</h3>
+        <br />
         <ul>
           {Object.keys(meal).filter(key => key.includes('strIngredient') && meal[key]).map((key, index) => (
             <li key={index}>{meal[key]}</li>
           ))}
         </ul>
       </div>
+     
       <footer className={styles.footer}>
+        <Link className={styles.link} to="/">Go back to the Home Page</Link>
         <p>&copy; 2024 Kitchen Creations. Alla rättigheter reserverade.</p>
       </footer>
    </>

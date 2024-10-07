@@ -1,6 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useLocation,useNavigate,Link } from 'react-router-dom';
 import styles from '../css/Results.module.css'; 
 
 function Results() {
@@ -22,7 +21,7 @@ function Results() {
             meals.map((meal) => (
               <li key={meal.idMeal} onClick={() => handleClick(meal)} className={styles.ObjectContainer}>
                 <h2>{meal.strMeal}</h2>
-                <img src={meal.strMealThumb} alt={meal.strMeal} style={{ width: '200px' }} />
+                <img src={meal.strMealThumb} alt={meal.strMeal} />
               </li>
             ))
           ) : (
@@ -32,6 +31,8 @@ function Results() {
       </div>
 
       <footer className={styles.resultsFooter}>
+        <Link className={styles.link} to="/">Go back to the Home Page</Link>
+        <br />
         <p>&copy; 2024 Kitchen Creations. Alla rättigheter reserverade.</p>
       </footer>
     </div>

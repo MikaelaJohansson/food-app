@@ -22,7 +22,6 @@ body::before{
   background-size:contain;
   background-position: center;
   filter: brightness(0.9) blur(40px) contrast(1.7) saturate(0.7) hue-rotate(-10deg);
-
   z-index: -1;
 }
 

@@ -89,3 +89,22 @@
    text-decoration: underline;
 }
 
+.link {
+    color: black;
+    font-weight:bolder;
+    font-size: 1.2rem;
+}
+.link:hover{
+    font-size: 1.4rem;
+}
+
+@media only screen and (max-width:600px){
+    img{
+        margin-right: 5rem;
+        padding: 1rem;
+    }
+   
+    .categoryText{
+        font-size: 2rem;
+    } 
+}

@@ -160,5 +160,23 @@
     text-decoration: underline;
 }
 
+@media only screen and (max-width:800px){
+    .headH1{
+        font-size: 5rem;
+    }
 
+    .kategoriesContainer{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: -24rem;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .headH1{
+      font-size: 3rem;
+    }
+
+}
 

@@ -43,6 +43,7 @@ const Category = () => {
                 )}
             </ul>
             <footer className={styles.footer}>
+                <Link className={styles.link}  to="/">Go back to the Home Page</Link>
              <p>&copy; 2024 Kitchen Creations. Alla rättigheter reserverade.</p>
             </footer>
         </div>

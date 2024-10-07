@@ -8,7 +8,7 @@
 .resultsMainContent {
     flex: 1;
     padding-top: 6rem; 
-    padding-bottom: 4rem; 
+   
 }
 
 
@@ -19,6 +19,8 @@
     padding: 1rem;
     width: 100vw;
     box-sizing: border-box;
+    margin-top: 20rem;
+   
 }
 
 .resultText {
@@ -75,10 +77,42 @@
     max-width: fit-content;
     height: fit-content;
     border-radius: 50%;
+    width: 200px;
 }
 
 .resultContainer img:hover {
     transform: scale(1.2);
     box-shadow: 3px 1px 5px rgb(242, 229, 204);
 }
+.link {
+    color: black;
+    font-weight:bolder;
+    font-size: 1.2rem;
+}
+.link:hover{
+    font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .resultText{
+        font-size: 1.7rem;
+    }
+    .resultContainer{
+        padding: 0;
+        width: 400px;
+        height: fit-content;
+    }
+    .resultContainer img {
+        width: 150px;
+    }
+    .ObjectContainer {
+        font-size: 1rem;
+    }
+    .resultsFooter{
+        padding: 2rem;
+        width: fit-content;
+        
+    }
+    
+}   
 
